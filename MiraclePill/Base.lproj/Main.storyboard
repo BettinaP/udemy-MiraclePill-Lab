@@ -237,6 +237,7 @@
                     </view>
                     <connections>
                         <outlet property="buyButton" destination="K1Y-yr-JGM" id="KAx-2v-NjQ"/>
+                        <outlet property="chooseStateButton" destination="Cmd-Zt-ovk" id="g5g-G1-Rlu"/>
                         <outlet property="cityLabel" destination="K7d-uu-qa8" id="ESl-aX-oWL"/>
                         <outlet property="countryLabel" destination="Vqt-ZM-29a" id="bHr-Rt-dww"/>
                         <outlet property="dividerView" destination="h8l-S4-0Bz" id="suR-jU-nbR"/>

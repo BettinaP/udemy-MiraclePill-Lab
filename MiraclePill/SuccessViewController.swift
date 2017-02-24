@@ -12,6 +12,12 @@ class SuccessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        createSuccessImageView()
+        // Do any additional setup after loading the view.
+    }
+
+    func createSuccessImageView()
+    {
         let successImageView = UIImageView()
         
         successImageView.image = UIImage(named: "successIndicator")
@@ -20,9 +26,9 @@ class SuccessViewController: UIViewController {
         successImageView.translatesAutoresizingMaskIntoConstraints = false
         successImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         successImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        // Do any additional setup after loading the view.
+    
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

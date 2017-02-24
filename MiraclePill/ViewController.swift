@@ -113,33 +113,36 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func buyButtonPressed(_ sender: Any) {
         
-        let successImageView = UIImageView()
+        performSegue(withIdentifier: "buySuccess", sender: sender)
+//  tutorial says to hide all controls and only have success image show, would use code below. Decided to create a second view controller to segue to successImageView instead.
         
-        successImageView.image = UIImage(named: "successIndicator")
-        self.view.addSubview(successImageView)
-        
-        successImageView.translatesAutoresizingMaskIntoConstraints = false
-        successImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        successImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        pillImageView.isHidden = true
-        pillLabel.isHidden = true
-        priceLabel.isHidden = true
-        dividerView.isHidden = true
-        fullNameLabel.isHidden = true
-        enterNameTextField.isHidden = true
-        streetAddressLabel.isHidden = true
-        enterAddressTextField.isHidden = true
-        cityLabel.isHidden = true
-        enterCityTextField.isHidden = true
-        stateLabel.isHidden = true
-        stateSelectedTextField.isHidden = true
-        chooseStateButton.isHidden = true
-        countryLabel.isHidden = true
-        enterCountryTextField.isHidden = true
-        zipCodeLabel.isHidden = true
-        enterZipCodeTextField.isHidden = true
-        buyButton.isHidden = true         
+//        let successImageView = UIImageView()
+//        
+//        successImageView.image = UIImage(named: "successIndicator")
+//        self.view.addSubview(successImageView)
+//        
+//        successImageView.translatesAutoresizingMaskIntoConstraints = false
+//        successImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        successImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        
+//        pillImageView.isHidden = true
+//        pillLabel.isHidden = true
+//        priceLabel.isHidden = true
+//        dividerView.isHidden = true
+//        fullNameLabel.isHidden = true
+//        enterNameTextField.isHidden = true
+//        streetAddressLabel.isHidden = true
+//        enterAddressTextField.isHidden = true
+//        cityLabel.isHidden = true
+//        enterCityTextField.isHidden = true
+//        stateLabel.isHidden = true
+//        stateSelectedTextField.isHidden = true
+//        chooseStateButton.isHidden = true
+//        countryLabel.isHidden = true
+//        enterCountryTextField.isHidden = true
+//        zipCodeLabel.isHidden = true
+//        enterZipCodeTextField.isHidden = true
+//        buyButton.isHidden = true         
     }
 }
 

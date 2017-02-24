@@ -179,6 +179,7 @@
                                 <state key="normal" image="buyNowBtn"/>
                                 <connections>
                                     <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5I-fz-SJK"/>
+                                    <segue destination="x5S-jS-sg5" kind="show" identifier="buySuccess" id="6bp-gc-0Wt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -260,6 +261,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="-38.23088455772114"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="zFK-qo-D4n">
+            <objects>
+                <viewController id="x5S-jS-sg5" customClass="SuccessViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="occ-D8-pR2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ndf-jf-Lvf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5vL-nz-paJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4w-bY-bN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="-38"/>
         </scene>
     </scenes>
     <resources>

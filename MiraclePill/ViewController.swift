@@ -43,10 +43,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var enterZipCodeTextField: UITextField!
     
     @IBOutlet weak var buyButton: UIButton!
-   
-    @IBOutlet weak var chooseStateButton: UIButton!
     
-    var stateSelectedTextField = UITextField()
+    @IBOutlet weak var chooseStateButton: UIButton!
     
     
     let states = ["Alabama","Alaska","Arizona", "Arkansas","California","Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota","Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
@@ -71,6 +69,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipCodeLabel.isHidden = true
         enterZipCodeTextField.isHidden = true
         statePicker.isHidden = false
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -86,22 +85,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        stateSelectedTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 0, height: 30.0))
-        stateSelectedTextField.backgroundColor = UIColor.white
-        self.view.addSubview(stateSelectedTextField)
         
-        stateSelectedTextField.text = states[row]
-        stateSelectedTextField.translatesAutoresizingMaskIntoConstraints = false
-        stateSelectedTextField.leadingAnchor.constraint(equalTo: stateLabel.leadingAnchor).isActive = true 
-        stateSelectedTextField.trailingAnchor.constraint(equalTo: stateLabel.trailingAnchor).isActive = true
-        stateSelectedTextField.topAnchor.constraint(equalTo: stateLabel.bottomAnchor).isActive = true
-    
+        
+        statePickerBtn.setTitle(states[row], for: .normal)
+        
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
         countryLabel.leadingAnchor.constraint(equalTo: stateLabel.leadingAnchor).isActive = true
         countryLabel.trailingAnchor.constraint(equalTo: stateLabel.trailingAnchor).isActive = true
-        countryLabel.topAnchor.constraint(equalTo: stateSelectedTextField.bottomAnchor, constant: 8.0).isActive = true
-         
-        statePickerBtn.isHidden = true
+        countryLabel.topAnchor.constraint(equalTo: statePickerBtn.bottomAnchor, constant: 8.0).isActive = true
+        
         statePicker.isHidden = true
         countryLabel.isHidden = false
         enterCountryTextField.isHidden = false
@@ -114,35 +106,35 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func buyButtonPressed(_ sender: Any) {
         
         performSegue(withIdentifier: "buySuccess", sender: sender)
-//  tutorial says to hide all controls and only have success image show, would use code below. Decided to create a second view controller to segue to successImageView instead.
+        //  tutorial says to hide all controls and only have success image show, would use code below. Decided to create a second view controller to segue to successImageView instead.
         
-//        let successImageView = UIImageView()
-//        
-//        successImageView.image = UIImage(named: "successIndicator")
-//        self.view.addSubview(successImageView)
-//        
-//        successImageView.translatesAutoresizingMaskIntoConstraints = false
-//        successImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        successImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        
-//        pillImageView.isHidden = true
-//        pillLabel.isHidden = true
-//        priceLabel.isHidden = true
-//        dividerView.isHidden = true
-//        fullNameLabel.isHidden = true
-//        enterNameTextField.isHidden = true
-//        streetAddressLabel.isHidden = true
-//        enterAddressTextField.isHidden = true
-//        cityLabel.isHidden = true
-//        enterCityTextField.isHidden = true
-//        stateLabel.isHidden = true
-//        stateSelectedTextField.isHidden = true
-//        chooseStateButton.isHidden = true
-//        countryLabel.isHidden = true
-//        enterCountryTextField.isHidden = true
-//        zipCodeLabel.isHidden = true
-//        enterZipCodeTextField.isHidden = true
-//        buyButton.isHidden = true         
+        //        let successImageView = UIImageView()
+        //
+        //        successImageView.image = UIImage(named: "successIndicator")
+        //        self.view.addSubview(successImageView)
+        //
+        //        successImageView.translatesAutoresizingMaskIntoConstraints = false
+        //        successImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        //        successImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        //
+        //        pillImageView.isHidden = true
+        //        pillLabel.isHidden = true
+        //        priceLabel.isHidden = true
+        //        dividerView.isHidden = true
+        //        fullNameLabel.isHidden = true
+        //        enterNameTextField.isHidden = true
+        //        streetAddressLabel.isHidden = true
+        //        enterAddressTextField.isHidden = true
+        //        cityLabel.isHidden = true
+        //        enterCityTextField.isHidden = true
+        //        stateLabel.isHidden = true
+        //        stateSelectedTextField.isHidden = true
+        //        chooseStateButton.isHidden = true
+        //        countryLabel.isHidden = true
+        //        enterCountryTextField.isHidden = true
+        //        zipCodeLabel.isHidden = true
+        //        enterZipCodeTextField.isHidden = true
+        //        buyButton.isHidden = true
     }
 }
 
